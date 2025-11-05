@@ -16,12 +16,16 @@ const getBook = function () {
         // 1o li) TITOLO
         let newTitle = document.createElement("li");
         newTitle.classList.add("text-decoration-none");
-        newTitle = singleBook.title;
+        newTitle.innerHTML = singleBook.title;
 
         // 2o li) PREZZO
         let newPrice = document.createElement("li");
         newPrice.classList.add("text-decoration-none");
-        newPrice = singleBook.price;
+        newPrice.innerHTML = singleBook.price;
+
+        // let z = document.createElement("p"); // is a node
+        // z.innerHTML = "test satu dua tiga";
+        // document.body.appendChild(z);
 
         // CREO LA UL
         let newUl = document.createElement("ul");
@@ -37,7 +41,8 @@ const getBook = function () {
         // CREO L'IMMAGINE DEL LIBRO
         let newImg = document.createElement("img");
         newImg.classList.add("img-fluid");
-        newImg = singleBook.img;
+        newImg.src = singleBook.img;
+        console.log(newImg);
 
         //CREO LA CARD
         let newCard = document.createElement("div");
@@ -47,7 +52,7 @@ const getBook = function () {
 
         // CREO LA COL
         let newCol = document.createElement("div");
-        newCol.classList.add("col col-3 col-md-3 col-lg-4");
+        newCol.classList.add("col", "col-3", "col-md-3", "col-lg-4");
         newCol.appendChild(newCard);
 
         // APPENDO LA COL CON DENTRO LA CARD COMPLETA ALLA ROW
