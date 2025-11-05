@@ -23,10 +23,6 @@ const getBook = function () {
         newPrice.classList.add("text-decoration-none");
         newPrice.innerHTML = singleBook.price;
 
-        // let z = document.createElement("p"); // is a node
-        // z.innerHTML = "test satu dua tiga";
-        // document.body.appendChild(z);
-
         // CREO LA UL
         let newUl = document.createElement("ul");
         newUl.classList.add("text-center");
@@ -42,11 +38,10 @@ const getBook = function () {
         let newImg = document.createElement("img");
         newImg.classList.add("img-fluid");
         newImg.src = singleBook.img;
-        console.log(newImg);
 
         //CREO LA CARD
         let newCard = document.createElement("div");
-        newCard.classList.add("card");
+        newCard.classList.add("card", "my-2");
         newCard.appendChild(newImg);
         newCard.appendChild(newCardBody);
 
