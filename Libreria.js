@@ -52,7 +52,7 @@ const getBook = function () {
 
         // CREO LA COL
         let newCol = document.createElement("div");
-        newCol.classList.add("col", "col-3", "col-md-3", "col-lg-4");
+        newCol.classList.add("col", "col-12", "col-md-4", "col-lg-3");
         newCol.appendChild(newCard);
 
         // APPENDO LA COL CON DENTRO LA CARD COMPLETA ALLA ROW
